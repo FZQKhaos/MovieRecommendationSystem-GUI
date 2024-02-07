@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.SVGPath?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="820.0" prefWidth="1080.0" styleClass="background" stylesheets="@../CSS/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.HomePageController">
+<AnchorPane prefHeight="820.0" prefWidth="1080.0" styleClass="background" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.HomePageController">
    <children>
       <HBox alignment="CENTER" layoutX="390.0" layoutY="20.0" maxWidth="300.0" prefHeight="40.0" prefWidth="300.0" styleClass="searchbar-box">
          <children>
