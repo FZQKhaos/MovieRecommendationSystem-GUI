@@ -7,6 +7,8 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.List;
+
 public class AppModel {
 
     LogicManager logic = new LogicManager();
@@ -14,6 +16,7 @@ public class AppModel {
     private final ObservableList<User>  obsUsers = FXCollections.observableArrayList();
     private final ObservableList<Movie> obsTopMovieSeen = FXCollections.observableArrayList();
     private final ObservableList<Movie> obsTopMovieNotSeen = FXCollections.observableArrayList();
+    private final ObservableList<Movie> obsSearchedMovies = FXCollections.observableArrayList();
     private final ObservableList<UserSimilarity>  obsSimilarUsers = FXCollections.observableArrayList();
     private final ObservableList<TopMovie> obsTopMoviesSimilarUsers = FXCollections.observableArrayList();
 
@@ -77,5 +80,11 @@ public class AppModel {
             return false;
         else
             return true;
+    }
+
+    public ObservableList<Movie> searchMovies(String query) {
+        obsSearchedMovies.clear();
+        obsSearchedMovies.addAll(logic.searchMovies(query));
+        return obsSearchedMovies;
     }
 }

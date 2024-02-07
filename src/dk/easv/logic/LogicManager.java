@@ -2,17 +2,24 @@ package dk.easv.logic;
 
 import dk.easv.dataaccess.DataAccessManager;
 import dk.easv.entities.*;
+import dk.easv.logic.util.Searcher;
+
 import java.util.*;
 
 public class LogicManager {
 
     DataAccessManager dataMgr = new DataAccessManager();
 
+    private final Searcher movieSearcher = new Searcher();
+
+    private Map<Integer, Movie> allMovies;
+
     public void reloadAllDataFromStorage(){
         dataMgr.updateCacheFromDisk();
     }
 
     public Collection<User> getAllUsers() {
+        allMovies = dataMgr.getAllMovies();
         return dataMgr.getAllUsers().values();
     }
 
@@ -114,5 +121,9 @@ public class LogicManager {
         catch (NoSuchElementException e){
             return null;
         }
+    }
+
+    public List<Movie> searchMovies(String query) {
+        return movieSearcher.search(allMovies, query);
     }
 }
