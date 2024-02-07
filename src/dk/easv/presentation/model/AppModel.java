@@ -61,6 +61,10 @@ public class AppModel {
         return obsTopMoviesSimilarUsers;
     }
 
+    public ObservableList<Movie> getObsSearchedMovies() {
+        return obsSearchedMovies;
+    }
+
     public User getObsLoggedInUser() {
         return obsLoggedInUser.get();
     }
