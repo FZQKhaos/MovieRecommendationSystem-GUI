@@ -1,6 +1,7 @@
 package dk.easv.presentation.controller;
 
 import dk.easv.presentation.model.AppModel;
+import io.github.palexdev.materialfx.controls.MFXPasswordField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +9,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -17,7 +17,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class LogInController implements Initializable {
-    @FXML private PasswordField passwordField;
+    @FXML private MFXPasswordField passwordField;
     @FXML private TextField userId;
     private AppModel model;
 
@@ -26,7 +26,8 @@ public class LogInController implements Initializable {
         model = new AppModel();
     }
 
-    public void logIn(ActionEvent actionEvent) {
+    @FXML
+    public void login(ActionEvent actionEvent) {
         model.loadUsers();
         model.loginUserFromUsername(userId.getText());
         if(model.getObsLoggedInUser()!=null){

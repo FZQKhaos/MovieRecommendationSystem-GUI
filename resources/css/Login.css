@@ -1,0 +1,31 @@
+.background{
+    -fx-background-color: rgb(18, 132, 225);
+    -fx-background-radius: 20;
+}
+
+.close-button {
+    -fx-text-fill: #ffffff;
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+    -fx-background-radius: 0 20 0 0;
+}
+
+.close-button:hover {
+    -fx-background-color: #9d0a0a;
+    -fx-text-fill: white;
+}
+
+.mfx-text-field{
+    -fx-border-color: black;
+    -fx-border-width: 5;
+}
+
+.mfx-password-field{
+    -fx-border-color: -mfx-charcoal;
+    -fx-border-width: 5;
+}
+
+.login-signup-button{
+    -fx-border-color: -mfx-charcoal;
+    -fx-border-radius: 5;
+}
