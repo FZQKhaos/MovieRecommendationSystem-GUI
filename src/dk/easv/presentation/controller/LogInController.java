@@ -1,6 +1,5 @@
 package dk.easv.presentation.controller;
 
-import dk.easv.entities.User;
 import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -32,7 +31,7 @@ public class LogInController implements Initializable {
         model.loginUserFromUsername(userId.getText());
         if(model.getObsLoggedInUser()!=null){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/App.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/App.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
