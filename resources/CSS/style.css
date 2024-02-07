@@ -110,3 +110,11 @@
     -fx-text-fill: white;
     -fx-font-size: 40;
 }
+
+.mfx-text-field{
+    -fx-border-width: 0;
+}
+
+.login-signup-button{
+    -fx-border-width: 0;
+}

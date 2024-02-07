@@ -1,5 +1,6 @@
 .background {
     -fx-background-color: rgb(32, 42, 50);
+    -fx-background-radius: 20;
 }
 
 .searchbar-box {
@@ -108,4 +109,12 @@
     -fx-background-color: white;
     -fx-text-fill: white;
     -fx-font-size: 40;
+}
+
+.mfx-text-field{
+    -fx-border-width: 0;
+}
+
+.login-signup-button{
+    -fx-border-width: 0;
 }
