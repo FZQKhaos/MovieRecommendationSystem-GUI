@@ -2,11 +2,13 @@ package dk.easv.logic;
 
 import dk.easv.dataaccess.DataAccessManager;
 import dk.easv.entities.*;
+
 import java.util.*;
 
 public class LogicManager {
 
     DataAccessManager dataMgr = new DataAccessManager();
+
 
     public void reloadAllDataFromStorage(){
         dataMgr.updateCacheFromDisk();

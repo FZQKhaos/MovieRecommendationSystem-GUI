@@ -12,11 +12,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/FXML/LogIn.fxml"));
-        Scene scene = new Scene(root);
-        scene.setFill(Color.TRANSPARENT);
-        primaryStage.setScene(scene);
-        primaryStage.initStyle(StageStyle.TRANSPARENT);
+
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/LogIn.fxml"));
+        primaryStage.setTitle("Movie Recommendation System 0.01 Beta");
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 
