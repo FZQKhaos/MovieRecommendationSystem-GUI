@@ -24,7 +24,7 @@
          <children>
             <ImageView fitHeight="680.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../IMAGES/MoviePoster.jpg" />
+                  <Image url="@../posters/Batman.jpg" />
                </image>
             </ImageView>
             <VBox prefHeight="700.0" prefWidth="658.0">
