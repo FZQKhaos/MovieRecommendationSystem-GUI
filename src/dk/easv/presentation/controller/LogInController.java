@@ -38,7 +38,7 @@ public class LogInController implements Initializable {
             stage.setScene(new Scene(root));
             stage.setTitle("Movie Recommendation System");
             stage.setResizable(false);
-            stage.getIcons().add(new Image("/IMAGES/CuteOtter.png"));
+            stage.getIcons().add(new Image("/CuteOtter.png"));
             stage.show();
 
             // AppController controller = loader.getController();
