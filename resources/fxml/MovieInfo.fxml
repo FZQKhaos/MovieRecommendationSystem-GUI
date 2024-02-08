@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="820.0" prefWidth="1080.0" styleClass="background" stylesheets="@../CSS/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.MovieInfoController">
+<AnchorPane prefHeight="820.0" prefWidth="1080.0" styleClass="background" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.MovieInfoController">
    <children>
       <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="14.0" layoutY="22.0" mnemonicParsing="false" onAction="#onActionBackToMainWindow" styleClass="back-button" text="&lt;" textAlignment="CENTER" textFill="WHITE">
          <font>
