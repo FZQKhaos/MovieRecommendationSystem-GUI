@@ -9,9 +9,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.Random;
 
 public class MovieBoxController {
 
@@ -29,7 +27,7 @@ public class MovieBoxController {
             primaryStage.setScene(new Scene(root));
             primaryStage.setTitle("Movie Info");
             primaryStage.setResizable(false);
-            primaryStage.getIcons().add(new Image("/CuteOtter.png"));
+            primaryStage.getIcons().add(new Image("/ICONS/CuteOtter.png"));
             primaryStage.show();
         }
         catch (IOException e) {

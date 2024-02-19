@@ -10,9 +10,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 public class HomePageController implements Initializable {
@@ -27,19 +29,11 @@ public class HomePageController implements Initializable {
     public void setModel(AppModel model) throws IOException {
         this.model = model;
         model.loadData(model.getObsLoggedInUser());
-        System.out.println(model.getObsLoggedInUser());
+        addRecommended();
     }
 
     private void addRecommended() throws IOException {
-        AppModel testModel = new AppModel();
-        testModel.loadUsers();
-        User user = testModel.getObsUsers().getFirst();
-        testModel.setObsLoggedInUser(user);
-        System.out.println(user);
-        testModel.loadData(user);
-
-
-        for (Movie ignored : testModel.getObsTopMovieSeen()) {
+        for (Movie ignored : model.getObsTopMovieSeen()) {
             if (this.hboxRecommended != null) {
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(getClass().getResource("/FXML/MovieBox.fxml"));
@@ -48,10 +42,8 @@ public class HomePageController implements Initializable {
                 hboxRecommended.getChildren().addFirst(button);
             }
         }
-
-
-        /* Use this to get a random poster!!
-        String directoryPath = "C:\\Users\\Jeppe\\Desktop\\MovieRecommendationSystem-GUI\\resources\\posters";
+        /*
+        String directoryPath = "resources/posters";
 
         File directory = new File(directoryPath);
         File[] files = directory.listFiles();
@@ -61,15 +53,13 @@ public class HomePageController implements Initializable {
             File randomFile = files[random.nextInt(files.length)];
             System.out.println(randomFile);
         }
-        */
+        
+         */
+
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        try {
-            addRecommended();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+
     }
 }
