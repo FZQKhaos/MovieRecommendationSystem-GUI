@@ -1,6 +1,7 @@
 package dk.easv.presentation.controller;
 
 import dk.easv.entities.Movie;
+import dk.easv.entities.User;
 import dk.easv.presentation.model.AppModel;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -11,6 +12,7 @@ import javafx.scene.layout.HBox;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class HomePageController implements Initializable {
@@ -24,12 +26,20 @@ public class HomePageController implements Initializable {
 
     public void setModel(AppModel model) throws IOException {
         this.model = model;
+        model.loadData(model.getObsLoggedInUser());
         System.out.println(model.getObsLoggedInUser());
     }
 
     private void addRecommended() throws IOException {
+        AppModel testModel = new AppModel();
+        testModel.loadUsers();
+        User user = testModel.getObsUsers().getFirst();
+        testModel.setObsLoggedInUser(user);
+        System.out.println(user);
+        testModel.loadData(user);
 
-        for (Movie ignored : model.getObsTopMovieSeen()) {
+
+        for (Movie ignored : testModel.getObsTopMovieSeen()) {
             if (this.hboxRecommended != null) {
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(getClass().getResource("/FXML/MovieBox.fxml"));
@@ -38,6 +48,7 @@ public class HomePageController implements Initializable {
                 hboxRecommended.getChildren().addFirst(button);
             }
         }
+
 
         /* Use this to get a random poster!!
         String directoryPath = "C:\\Users\\Jeppe\\Desktop\\MovieRecommendationSystem-GUI\\resources\\posters";
