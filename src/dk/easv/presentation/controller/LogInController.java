@@ -42,10 +42,11 @@ public class LogInController implements Initializable {
             stage.getIcons().add(new Image("/CuteOtter.png"));
             stage.show();
 
-            // AppController controller = loader.getController();
-            // controller.setModel(model);
+            //AppController controller = loader.getController();
+            //controller.setModel(model);
 
-
+            HomePageController controller = loader.getController();
+            controller.setModel(model);
         } catch (IOException e) {
             e.printStackTrace();
             Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load App.fxml");

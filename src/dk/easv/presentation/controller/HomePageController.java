@@ -1,51 +1,56 @@
 package dk.easv.presentation.controller;
 
 import dk.easv.entities.Movie;
+import dk.easv.presentation.model.AppModel;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
+
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class HomePageController implements Initializable {
+
+    private AppModel model;
 
     @FXML
     private HBox hboxRecommended;
     @FXML
     private HBox hboxOtherLike;
 
+    public void setModel(AppModel model) throws IOException {
+        this.model = model;
+        System.out.println(model.getObsLoggedInUser());
+    }
+
     private void addRecommended() throws IOException {
-        Movie movie1 = new Movie(1,"Potter", 1922);
-        Movie movie2 = new Movie(2,"Potter", 1922);
-        Movie movie3 = new Movie(3,"Potter", 1922);
-        Movie movie4 = new Movie(4,"Potter", 1922);
-        Movie movie5 = new Movie(5,"Potter", 1922);
-        Movie movie6 = new Movie(6,"Potter", 1922);
-        Movie movie7 = new Movie(7,"Potter", 1922);
 
-        List<Movie> recommended = new ArrayList<>();
-        recommended.add(movie1);
-        recommended.add(movie2);
-        recommended.add(movie3);
-        recommended.add(movie4);
-        recommended.add(movie5);
-        recommended.add(movie6);
-        recommended.add(movie7);
-
-        for (Movie movie : recommended) {
-            if (this.hboxRecommended!= null) {
+        for (Movie ignored : model.getObsTopMovieSeen()) {
+            if (this.hboxRecommended != null) {
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(getClass().getResource("/FXML/MovieBox.fxml"));
 
                 Button button = loader.load();
-                hboxRecommended.getChildren().add(0, button);
+                hboxRecommended.getChildren().addFirst(button);
             }
         }
+
+        /* Use this to get a random poster!!
+        String directoryPath = "C:\\Users\\Jeppe\\Desktop\\MovieRecommendationSystem-GUI\\resources\\posters";
+
+        File directory = new File(directoryPath);
+        File[] files = directory.listFiles();
+
+        if (files != null && files.length > 0) {
+            Random random = new Random();
+            File randomFile = files[random.nextInt(files.length)];
+            System.out.println(randomFile);
+        }
+        */
     }
 
     @Override
