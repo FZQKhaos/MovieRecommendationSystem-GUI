@@ -55,7 +55,7 @@ public class HomePageController {
 
     private void movieBox(Movie movie, HBox hBoxToFill) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/FXML/MovieBox.fxml"));
+        loader.setLocation(getClass().getResource("/fxml/MovieBox.fxml"));
 
         Button button = loader.load();
         MovieBoxController movieBoxController = loader.getController();
@@ -82,7 +82,7 @@ public class HomePageController {
         btn.setOnAction(event -> {
             Parent root;
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/MovieInfo.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/MovieInfo.fxml"));
                 root = loader.load();
                 MovieInfoController movieInfoController = loader.getController();
                 movieInfoController.setTxtTitle(movie.getTitle());
@@ -94,7 +94,7 @@ public class HomePageController {
                 primaryStage.setScene(new Scene(root));
                 primaryStage.setTitle("Movie Info");
                 primaryStage.setResizable(false);
-                primaryStage.getIcons().add(new Image("/ICONS/CuteOtter.png"));
+                primaryStage.getIcons().add(new Image("/icons/CuteOtter.png"));
                 primaryStage.show();
             }
             catch (IOException e) {

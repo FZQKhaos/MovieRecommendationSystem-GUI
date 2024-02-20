@@ -3287,7 +3287,7 @@
 3287,2003,Terminator 3: Rise of the Machines: Bonus Material
 3288,1978,Wonder Woman: Season 3
 3289,2001,My Louisiana Sky
-3290,1974,The Godfather
+3290,1974,The Godfather 2
 3291,2004,Howard Zinn: You Can't Be Neutral on a Moving Train
 3292,1956,The Great Locomotive Chase
 3293,2002,Waydowntown
@@ -5775,7 +5775,7 @@
 5775,1992,Scent of a Woman
 5776,2002,Eternal Blood
 5777,1980,Foxes
-5778,1990,The Godfather
+5778,1990,The Godfather 3
 5779,1999,The Terrorist
 5780,1978,Muqaddar Ka Sikandar
 5781,2003,Anatomy 2
@@ -12288,7 +12288,7 @@
 12290,1987,The Dame Edna Experience: Series 1
 12291,1957,Legend of the Lost
 12292,1993,The Secret of Roan Inish
-12293,1972,The Godfather
+12293,1972,The Godfather 1
 12294,1998,Around the Fire
 12295,1956,Between Heaven and Hell
 12296,1983,Deadline Auto Theft / Gone in 60 Seconds 2

@@ -42,7 +42,7 @@ public class LogInController implements Initializable {
             stage.setScene(new Scene(root));
             stage.setTitle("Movie Recommendation System");
             stage.setResizable(false);
-            stage.getIcons().add(new Image("/ICONS/CuteOtter.png"));
+            stage.getIcons().add(new Image("/icons/CuteOtter.png"));
             stage.show();
 
             //AppController controller = loader.getController();
@@ -56,7 +56,7 @@ public class LogInController implements Initializable {
             
         } catch (IOException e) {
             e.printStackTrace();
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load App.fxml");
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load HomePage.fxml");
             alert.showAndWait();
         }
 

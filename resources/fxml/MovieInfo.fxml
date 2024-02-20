@@ -61,7 +61,7 @@
                         <Insets bottom="40.0" />
                      </VBox.margin>
                   </Text>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" wrappingWidth="540.0">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Description:" wrappingWidth="540.0">
                      <font>
                         <Font size="40.0" />
                      </font>
