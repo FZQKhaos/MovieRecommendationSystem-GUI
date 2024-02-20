@@ -18,6 +18,8 @@ public class MovieInfoController {
     @FXML
     private Text txtYear;
     @FXML
+    private Text txtRating;
+    @FXML
     private ImageView imgPoster;
 
     @FXML
@@ -34,6 +36,9 @@ public class MovieInfoController {
         txtYear.setText(year);
     }
 
+    public void setTxtRating(String rating) {
+        txtRating.setText("Rating: " + rating);
+    }
     public void setImgPoster(String URL) throws FileNotFoundException {
         Image newImage = new Image(new FileInputStream(URL));
         imgPoster.setFitWidth(554);

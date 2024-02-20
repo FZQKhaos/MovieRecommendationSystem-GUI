@@ -24,14 +24,14 @@
       </HBox>
       <VBox layoutY="79.0" prefHeight="740.0" prefWidth="1080.0" spacing="20.0">
          <children>
-            <Label text="Recommended:" textFill="WHITE">
+            <Label text="Movies you like:" textFill="WHITE">
                <font>
                   <Font size="30.0" />
                </font>
             </Label>
             <ScrollPane minHeight="270.0" styleClass="scrollpane-movie" vbarPolicy="NEVER" vmax="0.0" VBox.vgrow="NEVER">
                <content>
-                  <HBox fx:id="hboxRecommended" minHeight="270.0" />
+                  <HBox fx:id="hBoxMoviesYouLike" minHeight="270.0" />
                </content>
             </ScrollPane>
             <Label text="Others like:" textFill="WHITE">
@@ -41,7 +41,7 @@
             </Label>
             <ScrollPane minHeight="270.0" styleClass="scrollpane-movie" vbarPolicy="NEVER" vmax="0.0">
                <content>
-                  <HBox fx:id="hboxOtherLike" minHeight="270.0" />
+                  <HBox fx:id="hBoxOtherLike" minHeight="270.0" />
                </content>
             </ScrollPane>
          </children>
