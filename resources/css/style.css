@@ -110,6 +110,10 @@
     -fx-font-size: 40;
 }
 
+.text-moviebox {
+    -fx-text-fill: white;
+}
+
 .mfx-text-field{
     -fx-border-width: 0;
 }

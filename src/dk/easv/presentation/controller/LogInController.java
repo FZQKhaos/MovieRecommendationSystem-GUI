@@ -23,8 +23,10 @@ public class LogInController implements Initializable {
     private AppModel model;
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(URL location, ResourceBundle resources)
+    {
         model = new AppModel();
+        userId.setText("Bezalel Simmel");
     }
 
     @FXML
