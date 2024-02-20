@@ -22,7 +22,7 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
          <children>
-            <ImageView fitHeight="680.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgPoster" fitHeight="680.0" fitWidth="454.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../posters/Batman.jpg" />
                </image>
@@ -32,12 +32,12 @@
                   <Insets bottom="20.0" />
                </HBox.margin>
                <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-titleyear" text="Batman">
+                  <Text fx:id="txtTitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-titleyear" text="Batman">
                      <font>
                         <Font size="50.0" />
                      </font>
                   </Text>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="1989">
+                  <Text fx:id="txtYear" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="1989">
                      <font>
                         <Font size="50.0" />
                      </font>
