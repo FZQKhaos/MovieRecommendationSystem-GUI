@@ -13,29 +13,6 @@
     -fx-background-color: rgb(58, 63, 71);
 }
 
-.close-button {
-    -fx-text-fill: black;
-    -fx-border-color: transparent;
-    -fx-background-color: transparent;
-    -fx-background-radius: 0 20 0 0;
-}
-
-.close-button:hover {
-    -fx-background-color: #9d0a0a;
-    -fx-text-fill: white;
-}
-
-.minimize-button {
-    -fx-text-fill: black;
-    -fx-border-color: transparent;
-    -fx-background-color: transparent;
-}
-
-.minimize-button:hover {
-    -fx-background-color: rgba(255, 255, 255, 0.2);
-    -fx-text-fill: white;
-}
-
 .back-button {
     -fx-text-fill: white;
     -fx-border-color: transparent;
@@ -57,21 +34,21 @@
     -fx-background-color: transparent;
 }
 
-.box-container {
+.movie-box {
     -fx-background-color: rgb(32, 42, 50);
     -fx-background-radius: 10px;
 }
 
-.box-container:hover {
+.movie-box:hover {
     -fx-background-color: rgb(40, 40, 40);
     -fx-cursor: hand;
 }
 
-.box-container:pressed {
+.movie-box:pressed {
     -fx-background-color: rgb(0, 0, 0);
 }
 
-.box-container:focused {
+.movie-box:focused {
     -fx-background-color: rgb(35, 35, 35);
 }
 

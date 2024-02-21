@@ -7,7 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
 
-<Button mnemonicParsing="false" prefHeight="250.0" prefWidth="180.0" styleClass="box-container" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.MovieBoxController">
+<Button mnemonicParsing="false" prefHeight="250.0" prefWidth="180.0" styleClass="movie-box" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.MovieBoxController">
 
    <graphic>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
