@@ -16,7 +16,7 @@
 
 <AnchorPane prefHeight="820.0" prefWidth="1080.0" styleClass="background" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.HomePageController">
    <children>
-      <HBox fx:id="hboxAnchorPanes" layoutY="83.0" prefHeight="740.0" prefWidth="1133.0" spacing="10.0">
+      <HBox fx:id="hBoxAnchorPanes" layoutY="83.0" prefHeight="740.0" prefWidth="1133.0" spacing="10.0">
          <children>
             <AnchorPane fx:id="paneSidebar" prefHeight="740.0" prefWidth="126.0">
                <children>
@@ -81,6 +81,6 @@
             <Image url="@../icons/User-avatar.svg.png" />
          </image>
       </ImageView>
-      <Button layoutX="20.0" layoutY="15.0" mnemonicParsing="false" onAction="#OnClickOpenAccount" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Button" />
+      <Button layoutX="20.0" layoutY="15.0" mnemonicParsing="false" onAction="#onClickOpenAccount" opacity="0.0" prefHeight="50.0" prefWidth="50.0" text="Button" />
    </children>
 </AnchorPane>
