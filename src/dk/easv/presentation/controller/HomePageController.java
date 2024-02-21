@@ -5,19 +5,24 @@ import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.ResourceBundle;
 
 public class HomePageController {
 
@@ -35,6 +40,8 @@ public class HomePageController {
     private boolean visible = false;
     @FXML
     private HBox hboxAnchorPanes;
+    @FXML
+    private TextField txfSearchBar;
 
     public void setModel(AppModel model) throws IOException {
         this.model = model;
@@ -43,6 +50,7 @@ public class HomePageController {
         addOtherLike();
         hboxAnchorPanes.getChildren().remove(paneSidebar);
         lblName.setText(model.getObsLoggedInUser().getName());
+        txfSearchBarListener();
     }
 
     private void addMoviesYouLike() throws IOException {
@@ -87,6 +95,7 @@ public class HomePageController {
         }
         movieBoxController.setLblTitle(movie.getTitle());
         movieBoxController.setLblYear(String.valueOf(movie.getYear()));
+        button.setUserData(movieBoxController);
         hBoxToFill.getChildren().addLast(button);
         addButtonClick(button,movie,posterPath);
     }
@@ -128,6 +137,24 @@ public class HomePageController {
             paneSidebar.setVisible(false);
             visible = false;
         }
+    }
 
+    private void txfSearchBarListener(){
+        txfSearchBar.textProperty().addListener((observable, oldValue, newValue) -> {
+            searchForMovies(hBoxMoviesYouLike);
+            searchForMovies(hBoxOtherLike);
+        });
+    }
+
+    private void searchForMovies(HBox hbox){
+        for (Node node : hbox.getChildren()){
+            if (node instanceof  Button existingButton){
+                MovieBoxController movieBoxController = (MovieBoxController) existingButton.getUserData();
+                boolean visible = movieBoxController.getTitle().contains(txfSearchBar.getText().toLowerCase());
+
+                existingButton.setVisible(visible);
+                existingButton.setManaged(visible);
+            }
+        }
     }
 }

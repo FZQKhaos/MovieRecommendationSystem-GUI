@@ -22,6 +22,10 @@ public class MovieBoxController {
         lblTitle.setText(title);
     }
 
+    public String getTitle() {
+        return lblTitle.getText().toLowerCase();
+    }
+
     public void setLblYear(String year){
         lblYear.setText(year);
     }
