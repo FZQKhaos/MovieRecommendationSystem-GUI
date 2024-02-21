@@ -2,12 +2,15 @@ package dk.easv.presentation.controller;
 
 import dk.easv.entities.Movie;
 import dk.easv.presentation.model.AppModel;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import java.io.File;
@@ -24,12 +27,22 @@ public class HomePageController {
     private HBox hBoxMoviesYouLike;
     @FXML
     private HBox hBoxOtherLike;
+    @FXML
+    private Label lblName;
+    @FXML
+    private AnchorPane paneSidebar;
+
+    private boolean visible = false;
+    @FXML
+    private HBox hboxAnchorPanes;
 
     public void setModel(AppModel model) throws IOException {
         this.model = model;
         model.loadData(model.getObsLoggedInUser());
         addMoviesYouLike();
         addOtherLike();
+        hboxAnchorPanes.getChildren().remove(paneSidebar);
+        lblName.setText(model.getObsLoggedInUser().getName());
     }
 
     private void addMoviesYouLike() throws IOException {
@@ -101,5 +114,20 @@ public class HomePageController {
                 System.out.println("You are not so smart, huh?");
             }
         });
+    }
+
+    @FXML
+    private void OnClickOpenAccount(ActionEvent actionEvent) {
+        if (!visible) {
+            hboxAnchorPanes.getChildren().addFirst(paneSidebar);
+            paneSidebar.setVisible(true);
+            visible = true;
+        }
+        else {
+            hboxAnchorPanes.getChildren().remove(paneSidebar);
+            paneSidebar.setVisible(false);
+            visible = false;
+        }
+
     }
 }
